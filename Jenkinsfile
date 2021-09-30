@@ -20,7 +20,6 @@ pipeline {
                 }
             }
         }
-<<<<<<< HEAD
         stage('Deploy to Kubernetes...') {
             steps {
                 script {
@@ -32,8 +31,6 @@ pipeline {
                 }
             }
         }
-=======
->>>>>>> 8344a8466172e8bed455ecad74f57cdfc5a3d556
     }
 }
 
