@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: main-deploy
+  namespace: project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-main
+  template:
+    metadata:
+      labels:
+        app: python-main
+    spec:
+      containers:
+      - name: main-container
+        image: myregistry.images.io:30000/python-main:0.0
+        ports:
+        - containerPort: 8000

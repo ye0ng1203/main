@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: main-svc
+  namespace: project
+spec:
+  ports:
+  - name: main
+    port: 8000
+    targetPort: 8000
+  type: NodePort
+  selector:
+    app: python-main
